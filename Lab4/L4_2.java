@@ -7,7 +7,8 @@ class Account
    {
     
     Scanner sc1=new Scanner(System.in);
-    System.out.println("Enter Amount");
+    
+    System.out.println("Enter Customer Name");
     CustName=sc1.nextLine();
     System.out.println("Enter Branch");
     Branch=sc1.nextLine();
