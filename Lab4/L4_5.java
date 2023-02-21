@@ -1,178 +1,240 @@
 import java.util.Scanner;
-
-
-class ArithmeticIntOp{
-	int result;
-	ArithmeticIntOp(){
-		result=0;
-	}
-	int getArithmethicIntOpResult(){
-
-		return	result ;
-	}
-	void calculate(int a,int b,char op){
-
-		switch(op){
-		case '+':
-			result=a+b;
-			break;
-		case '-':
-					result=a-b;
-					break;
-		case '*':
-					result=a*b;
-					break;
-		case '/':
-					result=a/b;
-					break;
-		case '%':
-					result=a%b;
-					break;
-		default:
-		 	System.out.println("Please Enter Right Arithmentic Op");
+class ArithmeticIntOp
+{
+	int calculate(int no1,int no2,char op)
+	{
+		if(op == '+')
+		{
+			return no1+no2;
 		}
-		
+		else if(op == '-')
+		{
+			return no1-no2;
+		}
+		else if(op == '*')
+		{
+			return no1*no2;
+		}
+		else if(op == '/')
+		{
+			return no1/no2;
+		}
+		else
+		{
+			return 0;
+		}
+	}
+	float calculate(float no1,float no2,char op)
+	{
+		if(op == '+')
+		{
+			return no1+no2;
+		}
+		else if(op == '-')
+		{
+			return no1-no2;
+		}
+		else if(op == '*')
+		{
+			return no1*no2;
+		}
+		else if(op == '/')
+		{
+			return no1/no2;
+		}
+		else
+		{
+			return 0;
+		}
 	}
 }
-
-
-class RelationalOp{
+class RelationalOp
+{
 	boolean result;
-	RelationalOp(){
+	RelationalOp()
+	{
 		result=false;
 	}
-	boolean RelationalOpResult(){
-
-		return	result ;
+	boolean getRelationalOpResult()
+	{
+		return result;
 	}
-	void calculate(int a,int b,String op){
-
-		switch(op){
-		case "==":
-				result=a==b;
-				break;
-		case "<=":
-					result=a<=b;
-					break;
-		case ">=":
-					result=a>=b;
-					break;
-		case "<":
-					result=a<b;
-					break;
-		case ">":
-					result=a>b;
-					break;
-		case "!=":
-					result=a!=b;
-					break;
-
-		default:
-		 	System.out.println("Please Enter Right Relational Op");
-		}
+	void calculate(int a,int b,String op)
+	{
+	if(op.equals("=="))
+	{
+		result = (a == b) ? true : false;
+	}
+	else if(op.equals("!="))
+	{
+		result = (a != b) ? true : false;
+	}
+	else if(op.equals(">"))
+	{
+		result = (a > b) ? true : false;
+	}
+	else if(op.equals("<"))
+	{
+		result = (a < b) ? true : false;
+	}
+	else if(op.equals(">="))
+	{
+		result = (a >= b) ? true : false;
+	}
+	else if(op.equals("<="))
+	{
+		result = (a <= b) ? true : false;
 	}
 }
-
-class BitwiseOp{
+void calculate(float a,float b,String op)
+{
+	if(op.equals("=="))
+	{
+		result = (a == b) ? true : false;
+	}
+	else if(op.equals("!="))
+	{
+		result = (a != b) ? true : false;
+	}
+	else if(op.equals(">"))
+	{
+		result = (a > b) ? true : false;
+	}
+	else if(op.equals("<"))
+	{
+		result = (a < b) ? true : false;
+	}
+	else if(op.equals(">="))
+	{
+		result = (a >= b) ? true : false;
+	}
+	else if(op.equals("<="))
+	{
+		result = (a <= b) ? true : false;
+	}
+	}
+}
+class BitwiseOp
+{
 	int result;
-	BitwiseOp(){
+	BitwiseOp()
+	{
 		result=0;
 	}
-	int BitwiseOpResult(){
-
-		return	result ;
+	int getBitwiseOpResult()
+	{
+		return result;
 	}
-	void calculate(int a,int b,String op){
-
-		switch(op){
-		case ">>>":
-				result=a>>>b;
-				break;
-		case ">>":
-					result=a>>b;
-					break;
-		case "<<":
-					result=a<<b;
-					break;
-		case "&":
-					result=a&b;
-					break;
-		case "^":
-					result=a^b;
-					break;
-		case "|":
-					result=a|b;
-					break;
-
-		default:
-		 	System.out.println("Please Enter Right Bitwise Op");
-		}
+	void calculate(int a,String op)
+	{
+	if(op.equals("~"))
+	{
+		result = ~(a);
 	}
 }
-
-class L4_5{
-
-	public static void main(String[] args){
-		Scanner sc=new Scanner(System.in);
-		char con;
-
-
-		do{
-		System.out.println("1) Arithmetihc op");
-		System.out.println("2) Relational op");
-		System.out.println("3) Bitwise op");
-		System.out.println("4) Exit");
-
-		System.out.println("Enter Your choice :");
-		int c=sc.nextInt();
-
-		System.out.print("Enter Int A :");
-		int a=sc.nextInt();
-		System.out.print("Enter Int B :");
-		int b=sc.nextInt();
-
-		System.out.print("Enter float A :");
-		float fa=sc.nextFloat();
-		System.out.print("Enter float B :");
-		float fb=sc.nextFloat();
-
-
-		switch(c){
-			case 1:
-				ArithmeticIntOp Aop=new ArithmeticIntOp();
-				System.out.println("Enter Oparation (+,-,*,/,%):");
-				char op=sc.next().charAt(0);
-				Aop.calculate(a,b,op);
-				System.out.println("Interger "+a+" "+op+" "+b+" = "+Aop.getArithmethicIntOpResult());
-				Aop.calculate(fa,fb,op);
-				System.out.println("Float "+fa+" "+op+" "+fb+" = "+Aop.getArithmethicIntOpResult());
-
-				break;
-
-			case 2:
-				RelationalOp Rop=new RelationalOp();
-				System.out.println("Enter Oparation (==,>,<,>=,<=,!=):");
-				String rop=sc.next();
-				Rop.calculate(a,b,rop);
-				System.out.println(a+" "+rop+" "+b+" = "+Rop.RelationalOpResult());
-				break;
-			case 3:
-				BitwiseOp Bop=new BitwiseOp();
-				System.out.println("Enter Oparation (<<<,>>,<<,&,|,^):");
-				String bop=sc.next();
-				Bop.calculate(a,b,bop);
-				System.out.println(a+" "+bop+" "+b+" = "+Bop.BitwiseOpResult());
-				break;
-			case 4:
-				System.exit(0);
-			default:
-				System.out.println("Please enter Right choice");
-		}
-		System.out.println("Prass Y to continue...");
-	    con=sc.next().charAt(0);
-
-		}while(con=='y');
-
-
+void calculate(int a,int b,String op)
+{
+	if(op.equals("&"))
+	{
+		result = (a & b);
 	}
+	else if(op.equals("|"))
+	{
+		result = (a | b);
+	}
+	else if(op.equals("^"))
+	{
+		result = (a ^ b);
+	}
+	else if(op.equals("~"))
+	{
+		result = ~(a);
+	}
+	else if(op.equals("<<"))
+	{
+		result = (a << b);
+	}
+	else if(op.equals(">>"))
+	{
+		result = (a >> b);
+	}
+	else if(op.equals(">>>"))
+	{
+		result = (a >>> b);
+	}
+}
+}
+class Lab4_5
+{
+	public static void main(String args[])
+	{
+	char ch='Y',opt,op;
+	String op1="";
+	int no1=0,no2=0;
+	float fno1=0,fno2=0;
+	Scanner sc=new Scanner(System.in);
+	do
+	{
+	System.out.println("1.Arithmetic Operator");
+	System.out.println("2.Relational Operator");
+	System.out.println("3.Bitwise Operator");
+	System.out.println("Enter your choice: ");
+	opt=sc.next().charAt(0);
+	switch(opt)
+	{
+		case '1':
+		ArithmeticIntOp a1=new ArithmeticIntOp();
+		System.out.println("Enter the integer no1 & no2:");
+		no1=sc.nextInt();
+		no2=sc.nextInt();
+		System.out.println("Enter the float no1 & no2:");
+		fno1=sc.nextFloat();
+		fno2=sc.nextFloat();
+		System.out.println("Enter the op [+,-,*,/]:");
+		op=sc.next().charAt(0);
+		System.out.println("INTERGER =: "+no1+" "+op+" "+no2+" = "+a1.calculate(no1,no2,op));
+		System.out.println("FLOAT =: "+fno1+" "+op+" "+fno2+" = "+a1.calculate(fno1,fno2,op));
+		break;
+		case '2':
+		RelationalOp r1=new RelationalOp();
+		System.out.println("Enter the no1 & no2:");
+		no1=sc.nextInt();
+		no2=sc.nextInt();
+		System.out.println("Enter the float no1 & no2:");
+		fno1=sc.nextFloat();
+		fno2=sc.nextFloat();
+		System.out.println("Enter the op from this [==,!=,>,<,>=,<=]:");
+		op1=sc.next();
+		r1.calculate(no1,no2,op1);
+		System.out.println("INTERGER:= "+no1+" "+op1+" "+no2+"="+r1.getRelationalOpResult());
+		r1.calculate(fno1,fno2,op1);
+		System.out.println("FLOAT:= "+fno1+" "+op1+" "+fno2+"="+r1.getRelationalOpResult());
+		break;
+		case '3':
+		BitwiseOp b1=new BitwiseOp();
+		System.out.println("Enter the no1 & no2:");
+		no1=sc.nextInt();
+		no2=sc.nextInt();
+		System.out.println("Enter the op from this [&,|,^,~,>>,<<,>>>]:");
+		op1=sc.next();
+		if(op1 == "~")
+		{
+			b1.calculate(no1,op1);
+			System.out.println(no1+" "+op1+"="+b1.getBitwiseOpResult());
+		}
+		else
+		{
+			b1.calculate(no1,no2,op1);
+			System.out.println(no1+" "+op1+" "+no2+"="+b1.getBitwiseOpResult());
+		}
+		break;
+		default:
+		System.out.println("Please Enter the proper choice");
+		ch='Y';
+		break;
+	}
+	System.out.println("Are you continue [y/n]: ");
+	ch=sc.next().charAt(0);
+	}while(ch == 'Y' || ch == 'y');
+}
 }
