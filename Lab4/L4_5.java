@@ -31,6 +31,7 @@ class ArithmeticIntOp{
 		default:
 		 	System.out.println("Please Enter Right Arithmentic Op");
 		}
+		
 	}
 }
 
@@ -142,9 +143,9 @@ class L4_5{
 				System.out.println("Enter Oparation (+,-,*,/,%):");
 				char op=sc.next().charAt(0);
 				Aop.calculate(a,b,op);
-				System.out.println(a+" "+op+" "+b+" = "+Aop.getArithmethicIntOpResult());
-				//Aop.calculate(fa,fb,op);
-				//System.out.println(fa+" "+op+" "+fb+" = "+Aop.getArithmethicIntOpResult());
+				System.out.println("Interger "+a+" "+op+" "+b+" = "+Aop.getArithmethicIntOpResult());
+				Aop.calculate(fa,fb,op);
+				System.out.println("Float "+fa+" "+op+" "+fb+" = "+Aop.getArithmethicIntOpResult());
 
 				break;
 
