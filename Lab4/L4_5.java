@@ -61,30 +61,30 @@ class RelationalOp
 	}
 	void calculate(int a,int b,String op)
 	{
-	if(op.equals("=="))
-	{
-		result = (a == b) ? true : false;
-	}
-	else if(op.equals("!="))
-	{
-		result = (a != b) ? true : false;
-	}
-	else if(op.equals(">"))
-	{
-		result = (a > b) ? true : false;
-	}
-	else if(op.equals("<"))
-	{
-		result = (a < b) ? true : false;
-	}
-	else if(op.equals(">="))
-	{
-		result = (a >= b) ? true : false;
-	}
-	else if(op.equals("<="))
-	{
-		result = (a <= b) ? true : false;
-	}
+		if(op.equals("=="))
+		{
+			result = (a == b) ? true : false;
+		}
+		else if(op.equals("!="))
+		{
+			result = (a != b) ? true : false;
+		}
+		else if(op.equals(">"))
+		{
+			result = (a > b) ? true : false;
+		}
+		else if(op.equals("<"))
+		{
+			result = (a < b) ? true : false;
+		}
+		else if(op.equals(">="))
+		{
+			result = (a >= b) ? true : false;
+		}
+		else if(op.equals("<="))
+		{
+			result = (a <= b) ? true : false;
+		}
 }
 void calculate(float a,float b,String op)
 {
