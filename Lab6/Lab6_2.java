@@ -1,8 +1,8 @@
 class Outer
 {
-  static int RollNO=25;
-  static String name="Rahul Motiyani";
-  static String Conctno="9429145154";
+  static int RollNO=68;
+  static String name="Kd Tarpara";
+  static String Conctno="898066XXXX";
   static class Inner
   {
   	 void msg()
